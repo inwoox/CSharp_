@@ -11,6 +11,7 @@ using System.IO;                                     // 파일 IO
 using System.Security.Cryptography;                  // SHA1
 using System.Collections;                            // 해시 테이블
 using System.Net;                                    // WebClient
+using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace WindowsFormsApp2
 {
@@ -248,6 +249,19 @@ namespace WindowsFormsApp2
         File.Copy(@path_1, @path_2);
         textBox10.Text += textBox1.Text + "  경로에  " + path + "  파일이 추가되었습니다." + Environment.NewLine + Environment.NewLine;
       }
+    }
+
+    private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
+    {
+      // CommonOpenFileDialog 클래스 생성 
+      CommonOpenFileDialog dialog = new CommonOpenFileDialog();
+      dialog.InitialDirectory = ""; 
+      dialog.IsFolderPicker = true; 
+      if (dialog.ShowDialog() == CommonFileDialogResult.Ok) 
+      { 
+        textBox1.Text = dialog.FileName;
+      }
+
     }
   }
 

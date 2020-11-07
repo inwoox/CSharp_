@@ -51,6 +51,7 @@
       this.label6 = new System.Windows.Forms.Label();
       this.textBox10 = new System.Windows.Forms.TextBox();
       this.button5 = new System.Windows.Forms.Button();
+      this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
       this.SuspendLayout();
       // 
       // button1
@@ -80,10 +81,11 @@
       this.textBox1.Multiline = true;
       this.textBox1.Name = "textBox1";
       this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-      this.textBox1.Size = new System.Drawing.Size(349, 19);
+      this.textBox1.Size = new System.Drawing.Size(237, 19);
       this.textBox1.TabIndex = 3;
       this.textBox1.Text = "파일 배포 대상 디렉토리";
       this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+      this.textBox1.Click += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
       // 
       // textBox2
       // 
@@ -96,6 +98,7 @@
       this.textBox2.TabIndex = 6;
       this.textBox2.Text = "배포 원본 디렉토리";
       this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+      this.textBox2.Click += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
       // 
       // button3
       // 
@@ -307,6 +310,10 @@
       this.button5.UseVisualStyleBackColor = true;
       this.button5.Click += new System.EventHandler(this.button5_Click);
       // 
+      // folderBrowserDialog1
+      // 
+      this.folderBrowserDialog1.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -337,7 +344,7 @@
       this.Cursor = System.Windows.Forms.Cursors.Hand;
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.Name = "Form1";
-      this.Text = "파일 검색 / 파일 복사 / HASH 비교 프로그램 (만든이: 황인우)";
+      this.Text = "파일 검색 / 파일 복사 / HASH 비교 프로그램 (만든이: 세상의 모든 코딩)";
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -367,6 +374,7 @@
     private System.Windows.Forms.Label label6;
     private System.Windows.Forms.TextBox textBox10;
     private System.Windows.Forms.Button button5;
+    private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
   }
 }
 

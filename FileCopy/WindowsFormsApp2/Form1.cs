@@ -256,12 +256,12 @@ namespace WindowsFormsApp2
       // CommonOpenFileDialog 클래스 생성 
       CommonOpenFileDialog dialog = new CommonOpenFileDialog();
       dialog.InitialDirectory = ""; 
-      dialog.IsFolderPicker = true; 
+      dialog.IsFolderPicker = true;
+      TextBox tbx = sender as TextBox;
       if (dialog.ShowDialog() == CommonFileDialogResult.Ok) 
       { 
-        textBox1.Text = dialog.FileName;
+        tbx.Text = dialog.FileName;
       }
-
     }
   }
 

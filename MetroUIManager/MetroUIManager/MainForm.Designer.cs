@@ -46,7 +46,6 @@
       this.mtNetPath1 = new MetroFramework.Controls.MetroTile();
       this.mtTaskMgr = new MetroFramework.Controls.MetroTile();
       this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-      this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
       this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
       this.mcbFont = new MetroFramework.Controls.MetroComboBox();
       ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
@@ -56,7 +55,7 @@
       // 
       this.metroLabel1.AutoSize = true;
       this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-      this.metroLabel1.Location = new System.Drawing.Point(515, 44);
+      this.metroLabel1.Location = new System.Drawing.Point(557, 44);
       this.metroLabel1.Name = "metroLabel1";
       this.metroLabel1.Size = new System.Drawing.Size(80, 25);
       this.metroLabel1.TabIndex = 2;
@@ -69,7 +68,7 @@
       this.mcbTheme.Items.AddRange(new object[] {
             "Dark",
             "Light"});
-      this.mcbTheme.Location = new System.Drawing.Point(611, 44);
+      this.mcbTheme.Location = new System.Drawing.Point(653, 44);
       this.mcbTheme.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
       this.mcbTheme.Name = "mcbTheme";
       this.mcbTheme.Size = new System.Drawing.Size(121, 29);
@@ -81,7 +80,7 @@
       // 
       this.metroLabel2.AutoSize = true;
       this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-      this.metroLabel2.Location = new System.Drawing.Point(515, 82);
+      this.metroLabel2.Location = new System.Drawing.Point(557, 82);
       this.metroLabel2.Name = "metroLabel2";
       this.metroLabel2.Size = new System.Drawing.Size(77, 25);
       this.metroLabel2.TabIndex = 4;
@@ -106,7 +105,7 @@
             "Magenta",
             "Purple",
             "Red"});
-      this.mcbColor.Location = new System.Drawing.Point(611, 82);
+      this.mcbColor.Location = new System.Drawing.Point(653, 82);
       this.mcbColor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
       this.mcbColor.Name = "mcbColor";
       this.mcbColor.Size = new System.Drawing.Size(121, 29);
@@ -123,7 +122,7 @@
       // 
       this.mtNews.ActiveControl = null;
       this.mtNews.BackColor = System.Drawing.Color.DeepSkyBlue;
-      this.mtNews.Location = new System.Drawing.Point(23, 337);
+      this.mtNews.Location = new System.Drawing.Point(23, 364);
       this.mtNews.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
       this.mtNews.Name = "mtNews";
       this.mtNews.Size = new System.Drawing.Size(174, 179);
@@ -139,7 +138,7 @@
       // 
       this.mtTimer.ActiveControl = null;
       this.mtTimer.BackColor = System.Drawing.Color.DeepSkyBlue;
-      this.mtTimer.Location = new System.Drawing.Point(23, 135);
+      this.mtTimer.Location = new System.Drawing.Point(23, 155);
       this.mtTimer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
       this.mtTimer.Name = "mtTimer";
       this.mtTimer.Size = new System.Drawing.Size(174, 179);
@@ -155,7 +154,7 @@
       // 
       this.mtPath4.ActiveControl = null;
       this.mtPath4.BackColor = System.Drawing.Color.DeepSkyBlue;
-      this.mtPath4.Location = new System.Drawing.Point(254, 417);
+      this.mtPath4.Location = new System.Drawing.Point(276, 446);
       this.mtPath4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
       this.mtPath4.Name = "mtPath4";
       this.mtPath4.Size = new System.Drawing.Size(106, 99);
@@ -171,7 +170,7 @@
       // 
       this.mtPath1.ActiveControl = null;
       this.mtPath1.BackColor = System.Drawing.Color.DeepSkyBlue;
-      this.mtPath1.Location = new System.Drawing.Point(488, 299);
+      this.mtPath1.Location = new System.Drawing.Point(530, 301);
       this.mtPath1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
       this.mtPath1.Name = "mtPath1";
       this.mtPath1.Size = new System.Drawing.Size(107, 99);
@@ -187,7 +186,7 @@
       // 
       this.mtNetPath2.ActiveControl = null;
       this.mtNetPath2.BackColor = System.Drawing.Color.DeepSkyBlue;
-      this.mtNetPath2.Location = new System.Drawing.Point(619, 178);
+      this.mtNetPath2.Location = new System.Drawing.Point(661, 180);
       this.mtNetPath2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
       this.mtNetPath2.Name = "mtNetPath2";
       this.mtNetPath2.Size = new System.Drawing.Size(106, 99);
@@ -203,7 +202,7 @@
       // 
       this.mtPath3.ActiveControl = null;
       this.mtPath3.BackColor = System.Drawing.Color.DeepSkyBlue;
-      this.mtPath3.Location = new System.Drawing.Point(254, 310);
+      this.mtPath3.Location = new System.Drawing.Point(276, 339);
       this.mtPath3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
       this.mtPath3.Name = "mtPath3";
       this.mtPath3.Size = new System.Drawing.Size(107, 99);
@@ -219,7 +218,7 @@
       // 
       this.mtPath2.ActiveControl = null;
       this.mtPath2.BackColor = System.Drawing.Color.DeepSkyBlue;
-      this.mtPath2.Location = new System.Drawing.Point(619, 299);
+      this.mtPath2.Location = new System.Drawing.Point(661, 301);
       this.mtPath2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
       this.mtPath2.Name = "mtPath2";
       this.mtPath2.Size = new System.Drawing.Size(106, 99);
@@ -235,7 +234,7 @@
       // 
       this.mtNetPath1.ActiveControl = null;
       this.mtNetPath1.BackColor = System.Drawing.Color.DeepSkyBlue;
-      this.mtNetPath1.Location = new System.Drawing.Point(488, 178);
+      this.mtNetPath1.Location = new System.Drawing.Point(530, 180);
       this.mtNetPath1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
       this.mtNetPath1.Name = "mtNetPath1";
       this.mtNetPath1.Size = new System.Drawing.Size(107, 99);
@@ -251,7 +250,7 @@
       // 
       this.mtTaskMgr.ActiveControl = null;
       this.mtTaskMgr.BackColor = System.Drawing.Color.DeepSkyBlue;
-      this.mtTaskMgr.Location = new System.Drawing.Point(366, 417);
+      this.mtTaskMgr.Location = new System.Drawing.Point(388, 446);
       this.mtTaskMgr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
       this.mtTaskMgr.Name = "mtTaskMgr";
       this.mtTaskMgr.Size = new System.Drawing.Size(107, 99);
@@ -269,46 +268,20 @@
       this.metroPanel1.HorizontalScrollbarBarColor = true;
       this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
       this.metroPanel1.HorizontalScrollbarSize = 10;
-      this.metroPanel1.Location = new System.Drawing.Point(232, 155);
+      this.metroPanel1.Location = new System.Drawing.Point(223, 155);
       this.metroPanel1.Name = "metroPanel1";
-      this.metroPanel1.Size = new System.Drawing.Size(500, 364);
+      this.metroPanel1.Size = new System.Drawing.Size(580, 460);
       this.metroPanel1.TabIndex = 14;
       this.metroPanel1.TabStop = true;
       this.metroPanel1.VerticalScrollbarBarColor = true;
       this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
       this.metroPanel1.VerticalScrollbarSize = 10;
       // 
-      // metroComboBox1
-      // 
-      this.metroComboBox1.FormattingEnabled = true;
-      this.metroComboBox1.ItemHeight = 23;
-      this.metroComboBox1.Items.AddRange(new object[] {
-            "Default",
-            "Black",
-            "White",
-            "Silver",
-            "Blue",
-            "Green",
-            "Lime",
-            "Teal",
-            "Orange",
-            "Brown",
-            "Pink",
-            "Magenta",
-            "Purple",
-            "Red"});
-      this.metroComboBox1.Location = new System.Drawing.Point(611, 119);
-      this.metroComboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-      this.metroComboBox1.Name = "metroComboBox1";
-      this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
-      this.metroComboBox1.TabIndex = 16;
-      this.metroComboBox1.UseSelectable = true;
-      // 
       // metroLabel3
       // 
       this.metroLabel3.AutoSize = true;
       this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-      this.metroLabel3.Location = new System.Drawing.Point(515, 119);
+      this.metroLabel3.Location = new System.Drawing.Point(557, 119);
       this.metroLabel3.Name = "metroLabel3";
       this.metroLabel3.Size = new System.Drawing.Size(65, 25);
       this.metroLabel3.TabIndex = 15;
@@ -324,7 +297,7 @@
             "Blue",
             "Purple",
             "Red"});
-      this.mcbFont.Location = new System.Drawing.Point(611, 119);
+      this.mcbFont.Location = new System.Drawing.Point(653, 119);
       this.mcbFont.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
       this.mcbFont.Name = "mcbFont";
       this.mcbFont.Size = new System.Drawing.Size(121, 29);
@@ -336,9 +309,8 @@
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(757, 547);
+      this.ClientSize = new System.Drawing.Size(826, 628);
       this.Controls.Add(this.mcbFont);
-      this.Controls.Add(this.metroComboBox1);
       this.Controls.Add(this.metroLabel3);
       this.Controls.Add(this.metroPanel1);
       this.Controls.Add(this.mtNews);
@@ -360,6 +332,7 @@
       this.Padding = new System.Windows.Forms.Padding(20, 75, 20, 25);
       this.Text = "TaskManagement";
       this.Theme = MetroFramework.MetroThemeStyle.Default;
+      this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
       this.Load += new System.EventHandler(this.MainForm_Load);
       ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
       this.ResumeLayout(false);
@@ -386,7 +359,6 @@
     private MetroFramework.Controls.MetroTile mtTaskMgr;
     private MetroFramework.Controls.MetroPanel metroPanel1;
     private MetroFramework.Controls.MetroComboBox mcbFont;
-    private MetroFramework.Controls.MetroComboBox metroComboBox1;
     private MetroFramework.Controls.MetroLabel metroLabel3;
   }
 }

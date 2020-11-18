@@ -50,21 +50,38 @@ namespace MetroUIManager
       mtPath4.UseCustomForeColor = true;
     }
 
+    // 뉴스 타일 클릭 
+    private void mtNews_Click(object sender, EventArgs e)
+    {
+      if (newsFlag == 0)
+      {
+        ucBoard board = new ucBoard();
+        board.Dock = DockStyle.Fill;
+        metroPanel1.Show();
+        metroPanel1.Controls.Add(board);
+        newsFlag = 1;
+      }
+      else
+      {
+        metroPanel1.Hide();
+        newsFlag = 0;
+      }
+    }
+
+    // 타이머 타일 클릭
     private void mtTimer_Click(object sender, EventArgs e)
     {
-      // 타이머 시작
-      if (timerFlag == 0)
+      if (timerFlag == 0)  // 시작 
       {
-        mtTimer.UseTileImage = false;   // 타일 이미지 가리기
+        mtTimer.UseTileImage = false;   
         timerFlag = 1;
-        timer.Interval = 1000; // 1초
+        timer.Interval = 1000; 
         timer.Tick += new EventHandler(timer_Tick);
         timer.Start();
       }
-      // 타이머 중지
       else
       {
-        mtTimer.UseTileImage = true;    // 타일 이미지 보이기 
+        mtTimer.UseTileImage = true;    
         timerFlag = 0;
         count = 0;
         timer.Tick -= timer_Tick;
@@ -74,14 +91,11 @@ namespace MetroUIManager
         mtTimer.Text = "Rest Timer";
         mtTimer.UseCustomBackColor = false;
       }
-
     }
 
     void timer_Tick(object sender, EventArgs e)
     {
       count++;
-
-      // 텍스트 중앙으로 이동, 텍스트 크기 +
       if (count == 1)
       {
         mtTimer.UseCustomBackColor = true;  // 이 설정이 없으면, 커스텀으로 컬러를 변경할 수 없다. / 이 옵션을 켜면, 일괄적으로 컬러 변경이 불가하다.
@@ -89,23 +103,18 @@ namespace MetroUIManager
         mtTimer.TextAlign = ContentAlignment.MiddleCenter;
         mtTimer.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
       }
-
-      // 시간 표시 
       if (count > 59)
       {
         int minute = count / 60;
         int second = count - (minute * 60);
         mtTimer.Text = DateTime.Now.ToLongTimeString() + "\r\n" + $"{minute}분 {second}초 경과";
       }
-
       else
       {
         mtTimer.Text = DateTime.Now.ToLongTimeString() + "\r\n" + count + "초 경과";
       }
 
-
-      // 20초 후 타일 색 깜빡임
-      if (count > 20)
+      if (count > 20)   // 타일 색 깜빡임
       {
         if (count % 2 == 0)
         {
@@ -116,7 +125,6 @@ namespace MetroUIManager
           mtTimer.BackColor = Color.Pink;
         }
       }
-
       if (count > 30)
       {
         Console.Beep();
@@ -133,7 +141,7 @@ namespace MetroUIManager
       }
     }
 
-    // 타일 클릭
+    // 기타 기능 타일 클릭
     private void mtNetPath_Click(object sender, EventArgs e)
     {
       if (((MetroTile)sender).Name == "mtNetPath1")
@@ -196,7 +204,6 @@ namespace MetroUIManager
       SendKeys.Send("^+{ESC}");
     }
 
-
     // metrostylemanager 컨트롤을 폼에 추가하고, 이 컨트롤의 Owner를 MainForm으로 설정 후, 콤보 박스에 선택할 항목들 추가, 아래와 같이 작성
     private void mcbTheme_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -214,23 +221,6 @@ namespace MetroUIManager
     private void mcbColor_SelectedIndexChanged(object sender, EventArgs e)
     {
       metroStyleManager1.Style = (MetroFramework.MetroColorStyle)Convert.ToInt32(mcbColor.SelectedIndex);
-    }
-
-    private void mtNews_Click(object sender, EventArgs e)
-    {
-      if(newsFlag == 0)
-      {
-        ucBoard board = new ucBoard();
-        board.Dock = DockStyle.Fill;
-        metroPanel1.Show();
-        metroPanel1.Controls.Add(board);
-        newsFlag = 1;
-      }
-      else
-      {
-        metroPanel1.Hide();
-        newsFlag = 0;
-      }
     }
 
     private void mcbFont_SelectedIndexChanged(object sender, EventArgs e)
@@ -278,6 +268,16 @@ namespace MetroUIManager
             tile.ForeColor = Color.Red;
           }
           break;
+      }
+    }
+
+    // 폼을 닫을 때 할 행위
+    private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+    {
+      Process[] procs = Process.GetProcessesByName("chromedriver");
+      foreach(Process proc in procs)
+      {
+        proc.Kill();
       }
     }
   }

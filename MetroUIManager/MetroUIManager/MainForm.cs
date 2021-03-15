@@ -12,10 +12,11 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace MetroUIManager
 {
-  public partial class MainForm : MetroFramework.Forms.MetroForm
+  public partial class MainForm : MetroForm
   {
     int count = 0;
     int timerFlag = 0;
@@ -36,9 +37,10 @@ namespace MetroUIManager
       metroPanel1.Hide();
 
       mcbTheme.SelectedIndex = 0;
-      mcbColor.SelectedIndex = 8;
+      mcbColor.SelectedIndex = 7;
       mcbFont.SelectedIndex = 0;
 
+      // 이 옵션들이 없으면 컬러를 변경할 수 없다.
       mtTimer.UseCustomForeColor = true;
       mtTaskMgr.UseCustomForeColor = true;
       mtNews.UseCustomForeColor = true;
@@ -98,7 +100,7 @@ namespace MetroUIManager
       count++;
       if (count == 1)
       {
-        mtTimer.UseCustomBackColor = true;  // 이 설정이 없으면, 커스텀으로 컬러를 변경할 수 없다. / 이 옵션을 켜면, 일괄적으로 컬러 변경이 불가하다.
+        mtTimer.UseCustomBackColor = true;  // 이 설정이 없으면, 커스텀으로 컬러를 변경할 수 없다.
         mtTimer.BackColor = Color.Pink;
         mtTimer.TextAlign = ContentAlignment.MiddleCenter;
         mtTimer.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;

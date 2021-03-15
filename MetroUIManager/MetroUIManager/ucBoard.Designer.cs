@@ -219,6 +219,9 @@
       // 
       // metroToolTip1
       // 
+      this.metroToolTip1.AutoPopDelay = 20000;
+      this.metroToolTip1.InitialDelay = 500;
+      this.metroToolTip1.ReshowDelay = 100;
       this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Teal;
       this.metroToolTip1.StyleManager = null;
       this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Dark;

@@ -293,29 +293,33 @@ namespace WindowsFormsApp2
       {
         string[] dirs = Directory.GetDirectories(path, $"*", SearchOption.AllDirectories);
         string[] files = Directory.GetFiles(path, $"*.{file}", SearchOption.AllDirectories);
-        
-        if(files != null)
+
+        try
         {
-          foreach (string f in files)
+          if (files != null)
           {
-            FileInfo leftFileInfo = new System.IO.FileInfo(f);
-            string file10 = Path.GetFileName(f);
-            string file11 = Path.GetDirectoryName(f);
-            FilePrint += "대상 파일명 : " + file10 + "   //   " + "파일 경로 : " + file11 + Environment.NewLine + Environment.NewLine;
-            FileHash = leftFileInfo.ToString();
-          }
+            foreach (string f in files)
+            {
+              FileInfo leftFileInfo = new System.IO.FileInfo(f);
+              string file10 = Path.GetFileName(f);
+              string file11 = Path.GetDirectoryName(f);
+              FilePrint += "대상 파일명 : " + file10 + "   //   " + "파일 경로 : " + file11 + Environment.NewLine + Environment.NewLine;
+              FileHash = leftFileInfo.ToString();
+            }
 
-          foreach (string f in files)                                                 // 파일 해시값
-          {
-            FileInfo leftFileInfo = new System.IO.FileInfo(f);
-            FileHash3 = leftFileInfo.ToString();
-            pathlist.Add(FileHash3);
+            foreach (string f in files)                                                 // 파일 해시값
+            {
+              FileInfo leftFileInfo = new System.IO.FileInfo(f);
+              FileHash3 = leftFileInfo.ToString();
+              pathlist.Add(FileHash3);
 
-            FileHash3 = GetChecksum(FileHash3);
-            hashlist.Add(FileHash3);
-            i++;
+              FileHash3 = GetChecksum(FileHash3);
+              hashlist.Add(FileHash3);
+              i++;
+            }
           }
         }
+        catch { }
         
       }
     }

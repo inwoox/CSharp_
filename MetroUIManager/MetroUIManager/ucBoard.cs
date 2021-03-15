@@ -36,8 +36,8 @@ namespace MetroUIManager
       service = ChromeDriverService.CreateDefaultService();
       options = new ChromeOptions();
 
-      options.AddArguments("headless");
-      service.HideCommandPromptWindow = true;
+      options.AddArguments("headless");          // 브라우저 창 띄우지 않느 설정
+      service.HideCommandPromptWindow = true;    // 프롬프트 창 띄우지 않는 설정
     }
 
     // 헤드라인 뉴스 카테고리 선택
@@ -56,6 +56,7 @@ namespace MetroUIManager
         pictureBox1.ImageLocation = driver.FindElement(By.XPath("//*[@id=\"today_main_news\"]/div[2]/div/div[1]/a[1]/img")).GetAttribute("src");
         mtNews1.Text = driver.FindElement(By.XPath("//*[@id=\"today_main_news\"]/div[2]/div/div[1]/a[1]/img")).GetAttribute("alt").ToString();
         links.Add(driver.FindElement(By.XPath("//*[@id=\"today_main_news\"]/div[2]/div/div[1]/a[1]")).GetAttribute("href").ToString());
+        //*[@id="today_main_news"]/div[2]/div/div[1]/a[1]
 
         // 그외 기사 이름 
         mtNews2.Visible = true;
